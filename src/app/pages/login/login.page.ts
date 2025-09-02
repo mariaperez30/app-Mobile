@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { identity } from 'rxjs';
 import { StorageProvider } from 'src/app/shared/provide/storage-provider';
 
@@ -15,7 +16,7 @@ export class LoginPage implements OnInit {
   emailControl: FormControl = new FormControl('', [Validators.required, Validators.email]);
   password: FormControl = new FormControl('', [Validators.required]);
 
-  constructor(private storagProvider: StorageProvider) { }
+  constructor(private storagProvider: StorageProvider, private r:Router) { }
 
   ngOnInit() {
   }
@@ -37,6 +38,6 @@ export class LoginPage implements OnInit {
     this.storagProvider.set('user', JSON.stringify(user));
   }
   click() {
-    console.log(this.storagProvider.get('user'));
+    this.r.navigate(['/register'])
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { StorageProvider } from 'src/app/shared/provide/storage-provider';
 
 @Component({
@@ -16,7 +17,7 @@ export class RegisterPage implements OnInit {
   emailControl: FormControl = new FormControl('', [Validators.required, Validators.email]);
   password: FormControl = new FormControl('', [Validators.required]);
 
-  constructor(private storagProvider: StorageProvider) { }
+  constructor(private storagProvider: StorageProvider, private r:Router) { }
 
   ngOnInit() {
   }
@@ -35,11 +36,11 @@ export class RegisterPage implements OnInit {
       console.log('wrong email')
       return;
     }
-
+    this.r.navigate(['/register'])
     this.storagProvider.set('user', JSON.stringify(user));
   }
   click() {
-    console.log(this.storagProvider.get('user'));
+  this.r.navigate(['/login'])
   }
 
 }
