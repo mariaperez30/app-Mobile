@@ -21,23 +21,13 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
   onSubmit() {
-    const user = {
-      email: this.emailControl.value,
-      password: this.password.value
-
-    };
-    if (!this.password.valid && !this.emailControl.valid) {
-      console.log('fill in the text fields')
-      return;
-    }
-    if (!this.emailControl.valid) {
-      console.log('wrong email')
-      return;
-    }
-
-    this.storagProvider.set('user', JSON.stringify(user));
+   const usuario: any = this.storagProvider.get("user")
+    if (usuario.password==this.password.value) {
+      this.r.navigate(['/home'])}
   }
   click() {
     this.r.navigate(['/register'])
   }
+
+    
 }

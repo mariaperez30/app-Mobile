@@ -13,6 +13,7 @@ export class InputComponent  implements OnInit {
   @Input() type: 'email' | 'password' | 'text' = 'text' 
   @Input() clear: boolean = false;
   @Input() controlador: FormControl = new FormControl();
+  @Input() placeholder: string = '';
 
   
   constructor() { }
