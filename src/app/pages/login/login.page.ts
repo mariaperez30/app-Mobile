@@ -22,7 +22,7 @@ export class LoginPage implements OnInit {
   }
   onSubmit() {
    const usuario: any = this.storagProvider.get("user")
-    if (usuario.password==this.password.value) {
+    if (usuario.password==this.password.value && usuario.email==this.emailControl.value) {
       this.r.navigate(['/home'])}
   }
   click() {
