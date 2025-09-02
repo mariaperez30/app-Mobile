@@ -1,0 +1,10 @@
+<ion-content [fullscreen]="true">
+   <h2>Register</h2>
+  <form (submit)="onSubmit()">
+  <app-input label ="name" type = "text" [clear] = "false" [controlador]="NameControl" ></app-input>
+  <app-input label ="Lastname" type = "text" [clear] = "false" [controlador]="lastnameControl" ></app-input>
+  <app-input label ="Email" type = "email" [clear] = "false" [controlador]="emailControl" ></app-input>
+  <app-input label ="Password" type ="password" [controlador] = "password"  ></app-input>
+  <app-button esperoTexto =" Create User" shape = "round" type="submit"></app-button>
+</form>
+</ion-content>

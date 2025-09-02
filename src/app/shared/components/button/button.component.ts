@@ -9,8 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonComponent  implements OnInit {
 
   @Input () esperoTexto: string = ''; 
-  @Input () shape : 'outline' = 'outline' ;
-  @Input () color : 'dark' = 'dark';
+  @Input () shape : 'round' | '' = '' ;
+  @Input () type : 'submit'  | 'button' = 'button';
+ 
 
   constructor() { }
 

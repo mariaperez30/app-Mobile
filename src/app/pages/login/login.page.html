@@ -1,11 +1,11 @@
 
 <ion-content [fullscreen]="true">
   <h2>LOGIIIIN</h2>
-  <form>
-  <app-input label ="Email" type = "email" [clear] = "false"></app-input>
-  <app-input label ="Password" type ="password" ></app-input>
-  <app-button esperoTexto =" Submit"></app-button>
-  <app-button esperoTexto =" Create User"></app-button>
+  <form (submit)="onSubmit()">
+  <app-input label ="Email" type = "email" [clear] = "false" [controlador]="emailControl"></app-input>
+  <app-input label ="Password" type ="password"  [controlador] = "password"></app-input>
+  <app-button esperoTexto =" Submit" shape = "round" type="submit" (click) = "click()"></app-button>
+  <app-button esperoTexto =" Create User" shape = "round"></app-button>
 </form>
 </ion-content>
 
