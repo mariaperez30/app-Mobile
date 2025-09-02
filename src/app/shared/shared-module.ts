@@ -5,11 +5,12 @@ import { IonicModule } from '@ionic/angular';
 import { ButtonComponent } from './components/button/button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StorageProvider } from './provide/storage-provider';
+import { SelectComponent } from './components/select/select.component';
 
 
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent],
+  declarations: [InputComponent, ButtonComponent,SelectComponent],
   providers: [StorageProvider],
   imports: [
     CommonModule,
@@ -18,6 +19,6 @@ import { StorageProvider } from './provide/storage-provider';
     ReactiveFormsModule,
 
   ],
-  exports:[InputComponent, ButtonComponent],
+  exports:[InputComponent, ButtonComponent, SelectComponent],
 })
 export class SharedModule { }

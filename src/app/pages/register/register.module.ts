@@ -18,7 +18,7 @@ import { SharedModule } from 'src/app/shared/shared-module';
     IonicModule,
     RegisterPageRoutingModule,
     SharedModule,
-
+    
   ],
   declarations: [RegisterPage]
 })

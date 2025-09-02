@@ -5,6 +5,7 @@
   <app-input label ="Lastname" type = "text" [clear] = "false" [controlador]="lastnameControl" placeholder=" Perez" ></app-input>
   <app-input label ="Email" type = "email" [clear] = "false" [controlador]="emailControl" placeholder="name@gmail.com" ></app-input>
   <app-input label ="Password" type ="password" [controlador] = "password" placeholder=" ***********"  ></app-input>
+  <app-select [controlador]="controlador" label="Country" [list]="data"></app-select>
   <app-button esperoTexto =" Create User" shape = "round" type="submit"></app-button>
   <app-button esperoTexto =" Login" shape = "round" type="submit" (click) = "click()"></app-button>
 </form>

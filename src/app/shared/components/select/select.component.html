@@ -1,3 +1,5 @@
-<p>
-  select works!
-</p>
+<ion-select [label]="label" [placeholder]="placeholder" [formControl] ="controlador">
+@for (item of list?.data; track $index) {
+  <ion-select-option value="{{item.name}}">{{item.name}} </ion-select-option>
+}
+</ion-select>
