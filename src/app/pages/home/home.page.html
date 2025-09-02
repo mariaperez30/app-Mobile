@@ -1,4 +1,12 @@
 <ion-content [fullscreen]="true">
-  <h2>Home</h2>
+  <h2>Noticias</h2>
+  @for(item of data?.articles; track $index){
+    <app-card     autor="{{item.author}}"
+      description="{{item.description}}"
+      title="{{item.title}}"
+      srci ="{{item.urlToImage}}">
+      
+    </app-card>
+  }
   
 </ion-content>
